@@ -9,6 +9,7 @@ const globalReducer = (state, action) => {
       return {
         ...state,
         currentTheme: action.theme,
+        toggledTheme: action.toggledTheme,
       }
     }
     case "CURSOR_TYPE": {
@@ -29,6 +30,8 @@ export const GlobalProvider = ({ children }) => {
       window.localStorage.getItem("theme") == null
         ? "dark"
         : window.localStorage.getItem("theme"),
+
+    toggledTheme: false,
 
     cursorType: false,
     cursorStyles: ["pointer", "hovered"],

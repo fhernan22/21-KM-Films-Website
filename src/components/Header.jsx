@@ -14,9 +14,9 @@ const Header = ({ onCursor }) => {
 
   const toggleTheme = () => {
     if (currentTheme === "dark") {
-      dispatch({ type: "TOGGLE_THEME", theme: "light" })
+      dispatch({ type: "TOGGLE_THEME", theme: "light", toggledTheme: true })
     } else {
-      dispatch({ type: "TOGGLE_THEME", theme: "dark" })
+      dispatch({ type: "TOGGLE_THEME", theme: "dark", toggledTheme: true })
     }
   }
 
