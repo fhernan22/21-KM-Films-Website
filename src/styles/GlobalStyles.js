@@ -79,7 +79,12 @@ export const Cursor = styled.div`
     border: 4px solid #ea281e;
     border: 4px solid #ea281e;
   }
+
   &.pointer {
     border: 4px solid ${props => props.theme.text} !important;
+  }
+
+  &.nav-open {
+    background: ${props => props.theme.text};
   }
 `

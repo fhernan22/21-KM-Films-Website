@@ -20,8 +20,6 @@ const HomeBanner = ({ onCursor }) => {
   const { currentTheme, toggledTheme } = useGlobalStateContext()
   const dispatch = useGlobalDispatchContext()
 
-  console.log(useGlobalStateContext())
-
   useEffect(() => {
     let renderingElement = canvas.current
     let drawingElement = renderingElement.cloneNode()

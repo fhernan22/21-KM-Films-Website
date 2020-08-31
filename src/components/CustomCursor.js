@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 
 import { Cursor } from "../styles/GlobalStyles"
 import { useGlobalStateContext } from "../context/globalContext"
 
-const CustomCursor = () => {
+const CustomCursor = ({ toggleMenu }) => {
   const { cursorType } = useGlobalStateContext()
-  const [mousePosition, setMousePosition] = useState({
-    x: 400,
-    y: 400,
-  })
+  const cursor = useRef(null)
 
   const onMouseMove = event => {
-    const { pageX: x, pageY: y } = event
-
-    setMousePosition({ x, y })
+    const { x, y } = event
+    cursor.current.style.left = `${x}px`
+    cursor.current.style.top = `${y}px`
   }
 
   useEffect(() => {
@@ -27,8 +24,10 @@ const CustomCursor = () => {
   return (
     <>
       <Cursor
-        className={`${!!cursorType ? "hovered" : ""} ${cursorType} `}
-        style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
+        ref={cursor}
+        className={`${!!cursorType ? "hovered" : ""} ${cursorType} ${
+          toggleMenu ? "nav-open" : ""
+        }`}
       />
     </>
   )
