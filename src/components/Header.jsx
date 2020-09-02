@@ -36,13 +36,13 @@ const Header = ({ onCursor, setToggleMenu, toggleMenu }) => {
             onMouseEnter={() => onCursor("hovered")}
             onMouseLeave={onCursor}
           >
-            <Link to="/">HENRR</Link>
+            <Link to="/">21</Link>
             <span
               onClick={toggleTheme}
               onMouseEnter={() => onCursor("pointer")}
               onMouseLeave={onCursor}
             ></span>
-            <Link to="/">Y</Link>
+            <Link to="/">KM</Link>
           </Logo>
           <Menu onClick={() => setToggleMenu(!toggleMenu)}>
             <button>
