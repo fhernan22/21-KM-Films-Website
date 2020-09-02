@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-//Styled Components
+
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { normalize } from "styled-normalize"
-//Custom Cursor
-import CustomCursor from "../components/customCursor"
-//Components
-import Header from "./header"
-import Navigation from "./navigation"
-import Footer from "./footer"
-// Context
+
+// Custom Components
+import Header from "./Header"
+import CustomCursor from "./CustomCursor"
+import Navigation from "./Navigation"
+import Footer from "./Footer"
+
 import {
   useGlobalStateContext,
   useGlobalDispatchContext,
@@ -39,8 +39,6 @@ body {
 `
 
 const Layout = ({ children }) => {
-  const dispatch = useGlobalDispatchContext()
-  const { cursorStyles, currentTheme } = useGlobalStateContext()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -56,8 +54,6 @@ const Layout = ({ children }) => {
     y: 0,
   })
 
-  const [toggleMenu, setToggleMenu] = useState(false)
-
   const darkTheme = {
     background: "#000",
     text: "#fff",
@@ -72,10 +68,15 @@ const Layout = ({ children }) => {
     top: `${hamburgerPosition.y}px`,
   }
 
+  const { currentTheme, cursorStyles } = useGlobalStateContext()
+  const dispatch = useGlobalDispatchContext()
+
   const onCursor = cursorType => {
     cursorType = (cursorStyles.includes(cursorType) && cursorType) || false
     dispatch({ type: "CURSOR_TYPE", cursorType: cursorType })
   }
+
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
@@ -87,13 +88,11 @@ const Layout = ({ children }) => {
         setToggleMenu={setToggleMenu}
         hamburgerPosition={hamburgerPosition}
         setHamburgerPosition={setHamburgerPosition}
-        siteTitle={data.site.siteMetadata.title}
       />
       <Navigation
         toggleMenu={toggleMenu}
         setToggleMenu={setToggleMenu}
         onCursor={onCursor}
-        setHamburgerPosition={setHamburgerPosition}
       />
       <main>{children}</main>
       <Footer

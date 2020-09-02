@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-//Banner
 export const Banner = styled.div`
   background: ${props => props.theme.background};
   height: 100vh;
@@ -9,13 +8,16 @@ export const Banner = styled.div`
   position: relative;
   margin-bottom: 296px;
 `
+
 export const Video = styled.div`
   height: 100%;
   width: 100%;
+
   video {
     object-fit: cover;
   }
 `
+
 export const Canvas = styled.canvas`
   position: absolute;
   top: 0;
@@ -39,11 +41,7 @@ export const Headline = styled(motion.span)`
   line-height: 0.76;
 `
 
-//Content Section
-export const HomeContentSection = styled(motion.div)`
-  margin-bottom: 200px;
-`
-export const Content = styled(motion.h2)`
+export const Content = styled.h2`
   width: 53%;
   font-size: 2.3rem;
   font-weight: 400;
@@ -51,7 +49,10 @@ export const Content = styled(motion.h2)`
   color: ${props => props.theme.text};
 `
 
-//Featured Section
+export const HomeContentSection = styled(motion.div)`
+  margin-bottom: 200px;
+`
+
 export const HomeFeaturedSection = styled(motion.div)`
   margin-bottom: 200px;
   position: relative;
@@ -132,7 +133,6 @@ export const FeaturedProjects = styled.div`
       margin-right: 108px;
       display: block;
     }
-
     &:before,
     &:after {
       content: "";
@@ -154,11 +154,10 @@ export const FeaturedProjects = styled.div`
   }
 `
 
-//ABOUT SECTION
-
 export const HomeAboutSection = styled(motion.div)`
   /* margin-bottom: 200px; */
 `
+
 export const About = styled.div`
   width: 100%;
   h2 {
@@ -176,9 +175,8 @@ export const About = styled.div`
     color: ${props => props.theme.text};
   }
 `
-export const Services = styled.div``
 
-//Accordion
+export const Services = styled.div``
 
 export const AccordionHeader = styled(motion.div)`
   width: 100%;

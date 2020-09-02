@@ -16,7 +16,6 @@ export const Container = styled.div`
   @media (min-width: 1408px) {
     max-width: 1244px;
   }
-
   ${props =>
     props.fluid &&
     css`
@@ -88,7 +87,6 @@ export const Cursor = styled.div`
   &.nav-open {
     background: ${props => props.theme.text};
   }
-
   &.nav-open,
   &.locked {
     border: 4px solid ${props => props.theme.text} !important;

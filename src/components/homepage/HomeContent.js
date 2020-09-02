@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
-//Scroll Observer
+
+import { Container } from "../../styles/GlobalStyles"
+import { Content, HomeContentSection } from "../../styles/HomeStyles"
+
 import { useInView } from "react-intersection-observer"
 import { useAnimation } from "framer-motion"
-//Styled Components
-import { Container } from "../../styles/globalStyles"
-import { Content, HomeContentSection } from "../../styles/homeStyles"
 
 const HomeContent = () => {
   const animation = useAnimation()
@@ -35,9 +35,10 @@ const HomeContent = () => {
     >
       <Container>
         <Content>
-          Great stories don’t just happen— <br /> they need to be uncovered. And
-          we dig deep to discover the great stories that lie just below the
-          surface. Dirt under our fingernails and all.
+          Lorem ipsum dolor sit amet-
+          <br /> consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Arcu non sodales neque sodales ut
+          etiam sit amet.
         </Content>
       </Container>
     </HomeContentSection>

@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react"
+
 import { Link } from "gatsby"
-//Framer Motion
 import { motion, useAnimation } from "framer-motion"
-// Styled Components
+
 import { Container, Flex } from "../../styles/globalStyles"
+
 import {
   HomeFeaturedSection,
   FeaturedVideo,
   FeaturedContent,
   FeaturedProjects,
 } from "../../styles/homeStyles"
-// Scroll Animations
+
 import { useInView } from "react-intersection-observer"
 
 const HomeFeatured = ({ onCursor }) => {
   const [hovered, setHovered] = useState(false)
   const animation = useAnimation()
-  const [featured, inView] = useInView({
+  const [featuredRef, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px",
   })
@@ -29,7 +30,7 @@ const HomeFeatured = ({ onCursor }) => {
 
   return (
     <HomeFeaturedSection
-      ref={featured}
+      ref={featuredRef}
       animate={animation}
       initial="hidden"
       variants={{
@@ -61,7 +62,7 @@ const HomeFeatured = ({ onCursor }) => {
               </motion.div>
             </Flex>
             <h2 className="featured-title">
-              NOT <br /> HUMBLE
+              Not <br /> Humble
               <span className="arrow">
                 <motion.svg
                   animate={{ x: hovered ? 48 : 0 }}
@@ -82,6 +83,7 @@ const HomeFeatured = ({ onCursor }) => {
             <video
               loop
               autoPlay
+              muted
               src={require("../../assets/video/featured-video.mp4")}
             ></video>
           </FeaturedVideo>

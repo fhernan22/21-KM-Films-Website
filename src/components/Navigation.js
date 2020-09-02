@@ -10,7 +10,7 @@ import {
   NavVideos,
   CloseNav,
 } from "../styles/navigationStyles"
-import { FooterContent, FooterSocial } from "../styles/footerStyles"
+import { FooterContent, FooterSocial } from "../styles/FooterStyles"
 //Icons
 import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"
 //Framer Motion
@@ -69,7 +69,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
             <Container>
               <NavHeader>
                 <Flex spaceBetween noHeight>
-                  <h2 to="/">Projects</h2>
+                  <h2>Projects</h2>
                   <CloseNav
                     onClick={() => setToggleMenu(!toggleMenu)}
                     onMouseEnter={() => onCursor("pointer")}
@@ -134,6 +134,29 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                     </motion.li>
                   ))}
                 </ul>
+                <NavFooter></NavFooter>
+                <NavVideos>
+                  <motion.div
+                    animate={{ width: revealVideo.show ? 0 : "100%" }}
+                    className="reveal"
+                  ></motion.div>
+                  <motion.div className="video">
+                    <AnimatePresence initial={false} exitBeforeEnter>
+                      <motion.video
+                        key={revealVideo.key}
+                        src={require(`../assets/video/${revealVideo.video}`)}
+                        initial={{ opacity: 0 }}
+                        exit={{ opacity: 0 }}
+                        animate={{
+                          opacity: 1,
+                        }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        loop
+                        autoPlay
+                      ></motion.video>
+                    </AnimatePresence>
+                  </motion.div>
+                </NavVideos>
               </NavList>
               <NavFooter>
                 <Flex spaceBetween>
@@ -171,28 +194,6 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   </FooterSocial>
                 </Flex>
               </NavFooter>
-              <NavVideos>
-                <motion.div
-                  animate={{ width: revealVideo.show ? 0 : "100%" }}
-                  className="reveal"
-                ></motion.div>
-                <motion.div className="video">
-                  <AnimatePresence initial={false} exitBeforeEnter>
-                    <motion.video
-                      key={revealVideo.key}
-                      src={require(`../assets/video/${revealVideo.video}`)}
-                      initial={{ opacity: 0 }}
-                      exit={{ opacity: 0 }}
-                      animate={{
-                        opacity: 1,
-                      }}
-                      transition={{ duration: 0.2, ease: "easeInOut" }}
-                      loop
-                      autoPlay
-                    ></motion.video>
-                  </AnimatePresence>
-                </motion.div>
-              </NavVideos>
             </Container>
           </Nav>
         )}

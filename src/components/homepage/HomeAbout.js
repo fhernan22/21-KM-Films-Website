@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react"
-// Styled Components
+
 import { Container, Flex } from "../../styles/globalStyles"
-//Framer Motion
+
 import { motion, useAnimation } from "framer-motion"
-//Home Component
+
+import { useInView } from "react-intersection-observer"
+
+import { useGlobalStateContext } from "../../context/globalContext"
+
 import {
   HomeAboutSection,
   About,
@@ -12,12 +16,7 @@ import {
   AccordionContent,
   AccordionIcon,
 } from "../../styles/homeStyles"
-//Context
-import { useGlobalStateContext } from "../../context/globalContext"
-//Scroll Observer
-import { useInView } from "react-intersection-observer"
 
-// Accordion Data
 const accordionIds = [
   {
     id: 0,
@@ -75,7 +74,6 @@ const accordionIds = [
 ]
 
 const HomeAbout = ({ onCursor }) => {
-  //Default state, using number for our id. Which ever the number/id is in the state. That will be opened.
   const [expanded, setExpanded] = useState(0)
   const animation = useAnimation()
   const [aboutRef, inView] = useInView({
@@ -108,16 +106,14 @@ const HomeAbout = ({ onCursor }) => {
         <Flex alignTop>
           <About>
             <h2>
-              Furrow is an integrated, full-service creative studio offering
-              video production, creative development, and post-production
-              services.
+              Lorem ipsum dolor sit amet- consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </h2>
             <p>
-              Everybody’s got a story. And we don’t stop until we’ve uncovered
-              what makes yours worth telling. Whether it’s working directly with
-              you, an agency partner, or putting the finishing touches on
-              something special, we’re ready to dig in and get our hands
-              dirty—are you?
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+              duis convallis convallis tellus id interdum velit laoreet id. Cras
+              pulvinar mattis nunc sed blandit.
             </p>
           </About>
           <Services>
@@ -145,15 +141,14 @@ const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
   return (
     <>
       <AccordionHeader
-        initial={false}
         onClick={() => setExpanded(isOpen ? false : details.id)}
-        whileHover={{
-          color: !isOpen && currentTheme === "dark" ? "#ffffff" : "#000000",
-        }}
         onHoverStart={() => setHovered(!hovered)}
         onHoverEnd={() => setHovered(!hovered)}
         onMouseEnter={() => onCursor("hovered")}
         onMouseLeave={onCursor}
+        whileHover={{
+          color: currentTheme === "dark" ? "#ffffff" : "#000000",
+        }}
       >
         <AccordionIcon>
           <motion.span

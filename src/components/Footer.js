@@ -57,19 +57,19 @@ const Footer = ({ setHamburgerPosition, onCursor }) => {
       <Container>
         <Flex spaceBetween>
           <FooterContent>
-            <p>902.315.1279</p>
-            <p>info@furrow.studio</p>
+            <p>432.307.4964</p>
+            <p>21km-films@gmail.com</p>
           </FooterContent>
           <FooterContent wider>
-            <p>15 Camburhill Ct Unit C</p>
-            <p>Charlottetown, PE C1E 0E2</p>
+            <p>12345 NW 67 CT</p>
+            <p>Hialeah Gardens, FL</p>
           </FooterContent>
           <FooterSocial>
             <a
               onMouseEnter={() => menuHover(instagramPosition.x)}
               onMouseLeave={onCursor}
               ref={instagramRef}
-              href="/"
+              href="https://www.instagram.com/elefantes_de_limon/"
               target="_blank"
             >
               <Instagram />
@@ -78,7 +78,7 @@ const Footer = ({ setHamburgerPosition, onCursor }) => {
               onMouseEnter={() => menuHover(facebookPosition.x)}
               onMouseLeave={onCursor}
               ref={facebookRef}
-              href="/"
+              href="https://www.facebook.com/ransey.padilla.5"
               target="_blank"
             >
               <Facebook />
