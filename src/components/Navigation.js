@@ -161,10 +161,10 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
               <NavFooter>
                 <Flex spaceBetween>
                   <FooterContent>
-                    <p>info@furrow.studio</p>
+                    <p>21km-films@gmail.com</p>
                   </FooterContent>
                   <FooterContent wider>
-                    <p>902.315.1279</p>
+                    <p>432.307.4964</p>
                   </FooterContent>
                   <FooterSocial>
                     <a
