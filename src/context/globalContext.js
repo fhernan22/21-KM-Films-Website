@@ -34,7 +34,7 @@ export const GlobalProvider = ({ children }) => {
     toggledTheme: false,
 
     cursorType: false,
-    cursorStyles: ["pointer", "hovered"],
+    cursorStyles: ["pointer", "hovered", "locked"],
   })
 
   return (

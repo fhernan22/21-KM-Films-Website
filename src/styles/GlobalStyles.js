@@ -14,7 +14,7 @@ export const Container = styled.div`
     max-width: 1152px;
   }
   @media (min-width: 1408px) {
-    max-width: 1240px;
+    max-width: 1244px;
   }
   ${props =>
     props.fluid &&
@@ -30,31 +30,26 @@ export const Flex = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-
   ${props =>
     props.spaceBetween &&
     css`
       justify-content: space-between;
-    `}
-
+    `};
   ${props =>
     props.flexEnd &&
     css`
       justify-content: flex-end;
-    `}
-
+    `};
   ${props =>
     props.alignTop &&
     css`
       align-items: flex-start;
-    `}
-
+    `};
   ${props =>
     props.noHeight &&
     css`
       height: 0;
-    `}
-
+    `};
 `
 
 export const Cursor = styled.div`
@@ -71,7 +66,9 @@ export const Cursor = styled.div`
   will-change: width, height, transform, border;
   pointer-events: none;
   z-index: 999;
-
+  &.pointer {
+    border: 4px solid ${props => props.theme.text} !important;
+  }
   &.hovered {
     background: transparent !important;
     width: 56px;
@@ -79,12 +76,19 @@ export const Cursor = styled.div`
     border: 4px solid #ea281e;
     border: 4px solid #ea281e;
   }
-
-  &.pointer {
+  &.locked {
+    background: transparent !important;
+    width: 56px;
+    height: 56px;
     border: 4px solid ${props => props.theme.text} !important;
+    top: ${props => props.theme.top} !important;
+    left: ${props => props.theme.left} !important;
   }
-
   &.nav-open {
     background: ${props => props.theme.text};
+  }
+  &.nav-open,
+  &.locked {
+    border: 4px solid ${props => props.theme.text} !important;
   }
 `

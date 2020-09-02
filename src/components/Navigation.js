@@ -158,6 +158,42 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   </motion.div>
                 </NavVideos>
               </NavList>
+              <NavFooter>
+                <Flex spaceBetween>
+                  <FooterContent>
+                    <p>info@furrow.studio</p>
+                  </FooterContent>
+                  <FooterContent wider>
+                    <p>902.315.1279</p>
+                  </FooterContent>
+                  <FooterSocial>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Instagram />
+                    </a>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Facebook />
+                    </a>
+                    <a
+                      onMouseEnter={() => onCursor("pointer")}
+                      onMouseLeave={onCursor}
+                      href="/"
+                      target="_blank"
+                    >
+                      <Vimeo />
+                    </a>
+                  </FooterSocial>
+                </Flex>
+              </NavFooter>
             </Container>
           </Nav>
         )}
