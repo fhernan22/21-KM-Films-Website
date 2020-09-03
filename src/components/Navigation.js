@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 //Styled Components
-import { Container, Flex } from "../styles/globalStyles"
+import { Container, Flex } from "../styles/globalStyles.js"
 import {
   Nav,
   NavHeader,
@@ -9,8 +9,8 @@ import {
   NavFooter,
   NavVideos,
   CloseNav,
-} from "../styles/navigationStyles"
-import { FooterContent, FooterSocial } from "../styles/footerStyles"
+} from "../styles/navigationStyles.js"
+import { FooterContent, FooterSocial } from "../styles/footerStyles.js"
 //Icons
 import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"
 //Framer Motion
