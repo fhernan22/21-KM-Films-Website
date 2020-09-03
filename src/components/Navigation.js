@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 //Styled Components
-import { Container, Flex } from "../styles/globalStyles.js"
+import { Container, Flex } from "../styles/GlobalStyles.js"
 import {
   Nav,
   NavHeader,

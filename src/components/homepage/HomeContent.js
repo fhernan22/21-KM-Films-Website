@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import { Container } from "../../styles/globalStyles"
+import { Container } from "../../styles/GlobalStyles"
 import { Content, HomeContentSection } from "../../styles/homeStyles"
 
 import { useInView } from "react-intersection-observer"

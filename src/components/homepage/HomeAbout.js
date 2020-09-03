@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import { Container, Flex } from "../../styles/globalStyles"
+import { Container, Flex } from "../../styles/GlobalStyles"
 
 import { motion, useAnimation } from "framer-motion"
 

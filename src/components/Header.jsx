@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { HeaderNav, Logo, Menu } from "../styles/headerStyles"
-import { Container, Flex } from "../styles/globalStyles"
+import { Container, Flex } from "../styles/GlobalStyles"
 import { Link } from "gatsby"
 
 import {

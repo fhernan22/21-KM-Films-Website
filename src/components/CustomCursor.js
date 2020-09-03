@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 
-import { Cursor } from "../styles/globalStyles"
+import { Cursor } from "../styles/GlobalStyles"
 import { useGlobalStateContext } from "../context/globalContext"
 
 const CustomCursor = ({ toggleMenu }) => {

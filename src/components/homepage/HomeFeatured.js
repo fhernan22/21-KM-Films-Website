@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { motion, useAnimation } from "framer-motion"
 
-import { Container, Flex } from "../../styles/globalStyles"
+import { Container, Flex } from "../../styles/GlobalStyles"
 
 import {
   HomeFeaturedSection,
