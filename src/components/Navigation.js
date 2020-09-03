@@ -9,8 +9,8 @@ import {
   NavFooter,
   NavVideos,
   CloseNav,
-} from "../styles/navigationStyles.js"
-import { FooterContent, FooterSocial } from "../styles/footerStyles.js"
+} from "../styles/NavigationStyles.js"
+import { FooterContent, FooterSocial } from "../styles/FooterStyles.js"
 //Icons
 import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"
 //Framer Motion

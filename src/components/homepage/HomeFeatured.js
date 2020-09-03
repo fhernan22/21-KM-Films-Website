@@ -10,7 +10,7 @@ import {
   FeaturedVideo,
   FeaturedContent,
   FeaturedProjects,
-} from "../../styles/homeStyles"
+} from "../../styles/HomeStyles"
 
 import { useInView } from "react-intersection-observer"
 

@@ -6,7 +6,7 @@ import {
   BannerTitle,
   Canvas,
   Headline,
-} from "../../styles/homeStyles"
+} from "../../styles/HomeStyles"
 
 import useWindowSize from "../../hooks/useWindowSize"
 import {

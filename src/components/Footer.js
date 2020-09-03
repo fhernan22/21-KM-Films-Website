@@ -6,7 +6,7 @@ import { useAnimation } from "framer-motion"
 
 //Styled Components
 import { Container, Flex } from "../styles/GlobalStyles"
-import { FooterNav, FooterContent, FooterSocial } from "../styles/footerStyles"
+import { FooterNav, FooterContent, FooterSocial } from "../styles/FooterStyles"
 
 //Icons
 import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"

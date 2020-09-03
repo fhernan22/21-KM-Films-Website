@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 
 import { Container } from "../../styles/GlobalStyles"
-import { Content, HomeContentSection } from "../../styles/homeStyles"
+import { Content, HomeContentSection } from "../../styles/HomeStyles"
 
 import { useInView } from "react-intersection-observer"
 import { useAnimation } from "framer-motion"
