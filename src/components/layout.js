@@ -78,6 +78,8 @@ const Layout = ({ children }) => {
 
   const [toggleMenu, setToggleMenu] = useState(false)
 
+  console.log(dispatch)
+
   return (
     <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
       <GlobalStyle />
