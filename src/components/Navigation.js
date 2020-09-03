@@ -10,7 +10,7 @@ import {
   NavVideos,
   CloseNav,
 } from "../styles/navigationStyles"
-import { FooterContent, FooterSocial } from "../styles/FooterStyles"
+import { FooterContent, FooterSocial } from "../styles/footerStyles"
 //Icons
 import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"
 //Framer Motion
