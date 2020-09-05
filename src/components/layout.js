@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -49,6 +49,12 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  })
+
   const [hamburgerPosition, setHamburgerPosition] = useState({
     x: 0,
     y: 0,
@@ -78,8 +84,13 @@ const Layout = ({ children }) => {
 
   const [toggleMenu, setToggleMenu] = useState(false)
 
+  const key = isClient ? "client" : "server"
+
   return (
-    <ThemeProvider theme={currentTheme === "dark" ? darkTheme : lightTheme}>
+    <ThemeProvider
+      theme={currentTheme === "dark" ? darkTheme : lightTheme}
+      key={key}
+    >
       <GlobalStyle />
       <CustomCursor toggleMenu={toggleMenu} />
       <Header

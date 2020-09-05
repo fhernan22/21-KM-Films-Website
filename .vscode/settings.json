@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/3fc9e956-b905-491d-af49-8ce0e97c7ffe/resourceGroups/Projects/providers/Microsoft.Web/sites/21kmfilms",
+    "appService.deploySubpath": "public"
+}

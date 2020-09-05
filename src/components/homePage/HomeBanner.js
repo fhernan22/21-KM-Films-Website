@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 
 import {
   Banner,
@@ -48,12 +48,6 @@ const HomeBanner = ({ onCursor }) => {
     })
 
     renderingElement.addEventListener("mousemove", evt => {
-      //   dispatch({
-      //     type: "TOGGLE_THEME",
-      //     theme: currentTheme,
-      //     toggledTheme: false,
-      //   })
-
       if (moving) {
         drawingContext.globalCompositeOperation = "source-over"
         renderingCtx.globalCompositeOperation = "destination-out"
@@ -70,12 +64,6 @@ const HomeBanner = ({ onCursor }) => {
         lastY = currentY
         renderingCtx.drawImage(drawingElement, 0, 0)
       }
-      //   if (toggledTheme) {
-      //     moving = false
-      //     renderingCtx.globalCompositeOperation = "source-over"
-      //     renderingCtx.fillStyle = currentTheme === "dark" ? "#000" : "#fff"
-      //     renderingCtx.fillRect(0, 0, size.width, size.height)
-      //   }
     })
   }, [currentTheme])
 
