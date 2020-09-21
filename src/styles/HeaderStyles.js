@@ -9,6 +9,10 @@ export const HeaderNav = styled(motion.div)`
   right: 0;
   left: 0;
   z-index: 99;
+
+  @media screen and (max-width: 1023px) {
+    top: 10px;
+  }
 `
 export const Logo = styled.div`
   a {

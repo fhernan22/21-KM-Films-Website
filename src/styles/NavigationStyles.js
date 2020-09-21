@@ -20,6 +20,15 @@ export const NavHeader = styled.div`
   h2 {
     color: ${props => props.theme.background};
   }
+
+  @media screen and (max-width: 1023px) {
+    top: 0;
+    padding: 20px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 29px 0;
+  }
 `
 export const CloseNav = styled.div`
   button {
@@ -71,6 +80,34 @@ export const NavList = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1023px) {
+    ul {
+      height: 70%;
+      li {
+        height: 70px;
+
+        .link {
+          transform: translateX(0) !important;
+
+          .arrow {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    ul {
+      /* margin-top: -350px; */
+      li {
+        height: 50px;
+        font-size: 1.75rem;
+        line-height: 1.7857142857;
+      }
+    }
+  }
 `
 export const NavFooter = styled.div`
   position: absolute;
@@ -83,6 +120,16 @@ export const NavFooter = styled.div`
   }
   svg path {
     fill: ${props => props.theme.background};
+  }
+
+  @media screen and (max-width: 1023px) {
+    font-size: 0.875rem;
+    line-height: 1.0714285714;
+  }
+
+  @media screen and (max-width: 767px) {
+    bottom: 50px;
+    padding: 32px 0;
   }
 `
 
@@ -112,5 +159,9 @@ export const NavVideos = styled.div`
     video {
       height: 100%;
     }
+  }
+
+  @media screen and (max-width: 1023px) {
+    display: none;
   }
 `

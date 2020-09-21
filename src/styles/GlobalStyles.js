@@ -50,6 +50,10 @@ export const Flex = styled.div`
     css`
       height: 0;
     `};
+
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
 `
 
 export const Cursor = styled.div`

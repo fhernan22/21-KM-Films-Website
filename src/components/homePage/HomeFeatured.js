@@ -62,7 +62,7 @@ const HomeFeatured = ({ onCursor }) => {
               </motion.div>
             </Flex>
             <h2 className="featured-title">
-              Not <br /> Humble
+              NOT <br /> HUMBLE
               <span className="arrow">
                 <motion.svg
                   animate={{ x: hovered ? 48 : 0 }}

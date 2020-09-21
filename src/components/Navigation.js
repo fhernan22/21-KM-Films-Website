@@ -158,42 +158,44 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   </motion.div>
                 </NavVideos>
               </NavList>
-              <NavFooter>
-                <Flex spaceBetween>
-                  <FooterContent>
-                    <p>21km-films@gmail.com</p>
-                  </FooterContent>
-                  <FooterContent wider>
-                    <p>432.307.4964</p>
-                  </FooterContent>
-                  <FooterSocial>
-                    <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
-                      href="/"
-                      target="_blank"
-                    >
-                      <Instagram />
-                    </a>
-                    <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
-                      href="/"
-                      target="_blank"
-                    >
-                      <Facebook />
-                    </a>
-                    <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
-                      href="/"
-                      target="_blank"
-                    >
-                      <Vimeo />
-                    </a>
-                  </FooterSocial>
-                </Flex>
-              </NavFooter>
+              <Flex>
+                <NavFooter>
+                  <Flex spaceBetween>
+                    <FooterContent>
+                      <p>21km-films@gmail.com</p>
+                    </FooterContent>
+                    <FooterContent wider>
+                      <p>432.307.4964</p>
+                    </FooterContent>
+                    <FooterSocial>
+                      <a
+                        onMouseEnter={() => onCursor("pointer")}
+                        onMouseLeave={onCursor}
+                        href="/"
+                        target="_blank"
+                      >
+                        <Instagram />
+                      </a>
+                      <a
+                        onMouseEnter={() => onCursor("pointer")}
+                        onMouseLeave={onCursor}
+                        href="/"
+                        target="_blank"
+                      >
+                        <Facebook />
+                      </a>
+                      <a
+                        onMouseEnter={() => onCursor("pointer")}
+                        onMouseLeave={onCursor}
+                        href="/"
+                        target="_blank"
+                      >
+                        <Vimeo />
+                      </a>
+                    </FooterSocial>
+                  </Flex>
+                </NavFooter>
+              </Flex>
             </Container>
           </Nav>
         )}

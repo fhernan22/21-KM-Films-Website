@@ -4,6 +4,10 @@ import { motion } from "framer-motion"
 export const FooterNav = styled(motion.div)`
   height: 300px;
   margin-top: 296px;
+
+  @media screen and (max-width: 1023px) {
+    margin-top: 96px;
+  }
 `
 
 export const FooterContent = styled.div`
@@ -17,6 +21,11 @@ export const FooterContent = styled.div`
     css`
       flex: 2;
     `}
+
+  @media only screen and (max-width: 1023px) {
+    flex-basis: 100%;
+    width: 100%;
+  }
 `
 
 export const FooterSocial = styled.div`
@@ -31,6 +40,15 @@ export const FooterSocial = styled.div`
     svg {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+    margin-top: 20px;
+
+    a {
+      padding-left: 0;
     }
   }
 `
